@@ -1,17 +1,17 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	fmt.Println("counting")
+	i, j := 42, 2701
 
-	fmt.Println("hi")
+	p := &i
+	fmt.Println(*p)
 
-	for i := range 10 {
-		defer fmt.Println(i)
-	}
+	*p = 21
+	fmt.Println(i)
 
-	fmt.Println("done")
+	p = &j
+	*p = *p / 37
+	fmt.Println(j)
 }
